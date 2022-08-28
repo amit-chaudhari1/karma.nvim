@@ -92,6 +92,10 @@ To enable the `karma` colorscheme for `lightline`:
 let g:lightline = {'colorscheme': 'karma'}
 ```
 
+## 🎨 Palette
+
+
+
 ## ⚙️ Configuration
 
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme karma`
