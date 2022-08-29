@@ -22,27 +22,20 @@ function M.setup(config)
         bg_statusline = "#292e42",
 
         fg = "#FFFFFF",
-        fg_dark = "#a9b1d6",
-        fg_gutter = "#3b4261",
+        fg_dark = "#cccccc",
+        fg_gutter = "#7f7f7f",
 
         blue = "#5AD4E6",
-        blue2 = "#005CC5",
         green = "#7BD88F",
-        green2 = "#2D972F",
         orange = "#FD9353",
-        orange2 = "#FA8D3E",
         purple = "#AF98E6",
-        purple2 = "#6F42C1",
         highlight = "#a86efd",
         highlight2 = "#a76efd80",
         red = "#FC618D",
-        red2 = "#FF003F",
+        -- red = "#FF003F",
         yellow = "#fce566",
         yellow2 = "#E3CF65",
-        yellow3 = "#EEAE11",
-        yellow4 = "#FFAA33",
         faint = "#1c2025",
-        faint2 = "#C3BAAF",
 
         gray1 = "#333333",
         gray2 = "#444444",
@@ -63,40 +56,61 @@ function M.setup(config)
         gray19 = "#fc618d19",
         gray20 = "#fc618d26",
 
-        faint_red = "#FC618D",
-        faint_green = "#7bd88f",
-        faint_blue = "#5AD4E6",
-        faint_purple = "#a76efd",
-        faint_yellow = "#fce566",
+        faint_red = util.brighten(colors.red, 0.2),
+        faint_green = util.brighten(colors.green, 0.2),
+        faint_blue = util.brighten(colors.blue, 0.2),
+        faint_purple = util.brighten(colors.purple, 0.2),
+        faint_yellow = util.brighten(colors.yellow, 0.2),
 
-        green100 = "#7bd88f19",
-        green200 = "#7bd88f26",
+        green100 = util.brighten("#7bd88f", 0.19),
+        green200 = util.brighten("#7bd88f", 0.19),
 
         git = {
             change = "#5AD4E6",
-            add = "#00000",
+            add = "#7bd88f",
             delete = "#FC618D",
             conflict = "#FF003F"
         },
         gitSigns = {
-            add = "#00000",
+            add = "#7bd88f",
             change = "#5AD4E6",
             delete = "#FC618D"
         }
     }
 
     if config.style == "day" or vim.o.background == "light" then
-        colors.bg = "#FFFFFF"
         colors.bg_dark = "#FFFFFF"
+        colors.terminal_black = "#FFFFFF"
+        colors.bg = "#FFFFFF"
+        colors.bg_highlight = "#cccccc"
+        colors.bg_statusline = "#7f7f7f"
+        colors.fg = "#0A0E14"
+        colors.fg_dark = "#292e42"
+        colors.fg_gutter = "#1d283a"
+        colors.blue = "#005CC5"
+        colors.green = "#2D972F"
+        colors.orange = "#FA8D3E"
+        colors.purple = "#6F42C1"
+        colors.red = "#FC618D"
+        colors.yellow = "#EEAE11"
+        colors.yellow2 = "#FFAA33"
+        colors.faint = "#C3BAAF"
+        colors.faint_red = util.brighten(colors.red, 0.2)
+        colors.faint_green = util.brighten(colors.green, 0.2)
+        colors.faint_blue = util.brighten(colors.blue, 0.2)
+        colors.faint_purple = util.brighten(colors.purple, 0.2)
+        colors.faint_yellow = util.brighten(colors.yellow, 0.2)
+        colors.green100 = util.brighten("#7bd88f", 0.19)
+        colors.green200 = util.brighten("#7bd88f", 0.19)
     end
     util.bg = colors.bg
     util.day_brightness = config.dayBrightness
 
     colors.diff = {
-        add = util.darken(colors.green2, 0.15),
+        add = util.darken(colors.green, 0.15),
         delete = util.darken(colors.red, 0.15),
         change = util.darken(colors.blue, 0.15),
-        text = colors.blue7
+        text = colors.fg_dark
     }
 
     colors.gitSigns = {
@@ -105,7 +119,7 @@ function M.setup(config)
         delete = util.brighten(colors.gitSigns.delete, 0.2)
     }
 
-    colors.git.ignore = colors.dark3
+    colors.git.ignore = colors.gray4
     colors.black = util.darken(colors.bg, 0.8, "#000000")
     colors.border_highlight = colors.blue
     colors.border = colors.black
@@ -123,10 +137,10 @@ function M.setup(config)
     colors.bg_search = colors.blue
     colors.fg_sidebar = colors.fg_dark
 
-    colors.error = colors.red1
+    colors.error = colors.red
     colors.warning = colors.yellow
     colors.info = colors.blue
-    colors.hint = colors.teal
+    colors.hint = colors.faint_green
 
     util.color_overrides(colors, config)
 
