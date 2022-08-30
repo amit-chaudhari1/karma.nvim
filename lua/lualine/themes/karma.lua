@@ -7,12 +7,12 @@ local karma = {}
 karma.normal = {
   a = { bg = colors.blue, fg = colors.black },
   b = { bg = colors.bg_highlight, fg = colors.fg },
-  c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
+  c = { bg = colors.bg_highlight, fg = colors.fg_sidebar },
 }
 
 karma.insert = {
   a = { bg = colors.green, fg = colors.black },
-  b = { bg = colors.bg, fg = colors.green },
+  b = { bg = colors.bg_highlight, fg = colors.green },
 }
 
 karma.command = {
@@ -31,7 +31,7 @@ karma.replace = {
 }
 
 karma.inactive = {
-  a = { bg = colors.bg_statusline, fg = colors.blue },
+  a = { bg = colors.bg_highlight, fg = colors.blue },
   b = { bg = colors.bg_statusline, fg = colors.bg_highlight, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.bg_highlight },
 }
