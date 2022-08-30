@@ -2,11 +2,18 @@
 
 A dark and light Neovim theme written in Lua ported from the Visual Studio Code [Karma](https://github.com/sreetamdas/karma) theme.
 
+Much of Lua util and color assigning is inspired from [NightFox.nvim](https://github.com/EdenEast/nightfox.nvim) and [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+
+this theme is not as polished as the OG karma in vscode, there's a lot of stuff that will probably change over time. I'd appreciate any help I can get.
+
 ## Dark Karma
+![DarkKarma_Screenshot](screenshots/sc1.jpg)
+![DarkKarma_Screenshot](screenshots/sc2.jpg)
 
 
 ## Light Karma
-
+![LightKarma_Screenshot](screenshots/Lsc1.png)
+![LightKarma_Screenshot](screenshots/Lsc2.png)
 
 ## ✨ Features
 
@@ -18,20 +25,20 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 
 ### Plugin Support
 
-- [ ] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [ ] [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-- [ ] [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
-- [ ] [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
-- [ ] [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-- [ ] [Git Gutter](https://github.com/airblade/vim-gitgutter)
-- [ ] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [x] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [x] [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
+- [x] [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
+- [x] [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
+- [x] [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+- [x] [Git Gutter](https://github.com/airblade/vim-gitgutter)
+- [x] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [ ] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [ ] [WhichKey](https://github.com/liuchengxu/vim-which-key)
 - [ ] [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [ ] [Dashboard](https://github.com/glepnir/dashboard-nvim)
 - [ ] [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-- [ ] [Lualine](https://github.com/hoob3rt/lualine.nvim)
-- [ ] [Lightline](https://github.com/itchyny/lightline.vim)
+- [x] [Lualine](https://github.com/hoob3rt/lualine.nvim)
+- [x] [Lightline](https://github.com/itchyny/lightline.vim)
 - [ ] [Neogit](https://github.com/TimUntersberger/neogit)
 - [ ] [vim-sneak](https://github.com/justinmk/vim-sneak)
 - [ ] [Fern](https://github.com/lambdalisue/fern.vim)
@@ -100,7 +107,7 @@ set-option -ga terminal-overrides ',XXX:Tc'  # older versions of tmux
 ```  
 
 ## 🎨 Palette
-
+![Karma colorPalette](screenshots/palette.png)
 
 ## ⚙️ Configurationn
 
