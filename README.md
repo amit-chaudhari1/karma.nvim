@@ -117,7 +117,7 @@ The theme comes in two styles, a darker variant `night` and `day`.
 
 The **day** style will be used if:
 
-- `vim.g.karma_syle == "day"`
+- `vim.g.karma_style == "day"`
 -  `vim.o.background == "light"`
 
 | Option                         | Default   | Description                                                                                                                                                     |
