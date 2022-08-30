@@ -4,11 +4,9 @@ A dark and light Neovim theme written in Lua ported from the Visual Studio Code 
 
 ## Dark Karma
 
-![image](https://user-images.githubusercontent.com/292349/115295327-7afdce80-a10e-11eb-89b3-2591262bf95a.png)
 
 ## Light Karma
 
-![image](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
 
 ## ✨ Features
 
@@ -91,12 +89,20 @@ To enable the `karma` colorscheme for `lightline`:
 " Vim Script
 let g:lightline = {'colorscheme': 'karma'}
 ```
+> ❗️ Note: if you are using tmux or similar multiplexers , please make sure that you add these for a color accurate experience of karma.nvim
+
+replace `XXX` with the output of `echo $TERM`
+
+```          
+set-option -sa terminal-overrides ',XXX:RGB' # newer versions of tmux
+set-option -ga terminal-overrides ',XXX:Tc'  # older versions of tmux 
+
+```  
 
 ## 🎨 Palette
 
 
-
-## ⚙️ Configuration
+## ⚙️ Configurationn
 
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme karma`
 
@@ -170,3 +176,5 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 Pull requests are welcome. 
 
+I know this theme is not as polished right now as it can be, 
+I can't test the theme on every terminal I know of, so you are encouraged to create and file an issue about any problem you've faced

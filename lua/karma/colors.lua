@@ -18,6 +18,7 @@ function M.setup(config)
         bg_dark = "#0A0E14",
         terminal_black = "#0A0E14",
         bg = "#0A0E14",
+        border = "#0A0E14", -- can't see any borders due in karma
         bg_highlight = "#292e42",
         bg_statusline = "#292e42",
 
@@ -47,20 +48,20 @@ function M.setup(config)
         gray10 = "#D7D7D7",
         gray11 = "#dfdfdf",
         gray12 = "#c3b5d3",
-        gray13 = "#50505034",
-        gray14 = "#f7f1ff0c",
-        gray15 = "#f7f1ff12",
-        gray16 = "#bab6c026",
-        gray17 = "#f7f1ff19",
-        gray18 = "#f7f1ff26",
-        gray19 = "#fc618d19",
-        gray20 = "#fc618d26",
+        gray13 = util.brighten("#505050",0.2), -- #50505034",
+        gray14 = util.brighten("#f7f1ff",0.2), -- #f7f1ff0c",
+        gray15 = util.brighten("#f7f1ff",0.07), -- #f7f1ff12",
+        gray16 = util.brighten("#bab6c0",0.15), -- #bab6c026",
+        gray17 = util.brighten("#f7f1ff",0.1), -- #f7f1ff19",
+        gray18 = util.brighten("#f7f1ff",0.15), -- #f7f1ff26",
+        gray19 = util.brighten("#fc618d",0.1), -- #fc618d19",
+        gray20 = util.brighten("#fc618d",0.15), -- #fc618d26",
 
-        faint_red = util.brighten(colors.red, 0.2),
-        faint_green = util.brighten(colors.green, 0.2),
-        faint_blue = util.brighten(colors.blue, 0.2),
-        faint_purple = util.brighten(colors.purple, 0.2),
-        faint_yellow = util.brighten(colors.yellow, 0.2),
+        faint_red = util.brighten("#FC618D", 0.2),
+        faint_green = util.brighten("#7BD88F", 0.2),
+        faint_blue = util.brighten("#5AD4E6", 0.2),
+        faint_purple = util.brighten("#AF98E6", 0.2),
+        faint_yellow = util.brighten("#fce566", 0.2),
 
         green100 = util.brighten("#7bd88f", 0.19),
         green200 = util.brighten("#7bd88f", 0.19),
@@ -79,12 +80,12 @@ function M.setup(config)
     }
 
     if config.style == "day" or vim.o.background == "light" then
-        colors.bg_dark = "#FFFFFF"
-        colors.terminal_black = "#FFFFFF"
-        colors.bg = "#FFFFFF"
+        colors.bg_dark = "#000000"
+        colors.terminal_black = "#000000"
+        colors.bg = "#000000"
         colors.bg_highlight = "#cccccc"
         colors.bg_statusline = "#7f7f7f"
-        colors.fg = "#0A0E14"
+        colors.fg = "#FFFFFF"
         colors.fg_dark = "#292e42"
         colors.fg_gutter = "#1d283a"
         colors.blue = "#005CC5"

@@ -5,11 +5,11 @@ local util = require("karma.util")
 local karma = {}
 
 karma.normal = {
-    left = {{colors.black, colors.blue}, {colors.blue, colors.fg_gutter}},
+    left = {{colors.bg, colors.fg}, {colors.blue, colors.bg_highlight}},
     middle = {{colors.fg, colors.bg_statusline}},
-    right = {{colors.black, colors.blue}, {colors.blue, colors.fg_gutter}},
-    error = {{colors.black, colors.error}},
-    warning = {{colors.black, colors.warning}}
+    right = {{colors.bg, colors.blue}, {colors.blue, colors.bg_highlight}},
+    error = {{colors.bg, colors.error}},
+    warning = {{colors.bg, colors.yellow}}
 }
 
 karma.insert = {
@@ -26,15 +26,15 @@ karma.replace = {
 
 karma.inactive = {
     left = {{colors.blue, colors.bg_statusline}, {colors.bg, colors.bg}},
-    middle = {{colors.fg_gutter, colors.bg_statusline}},
-    right = {{colors.fg_gutter, colors.bg_statusline}, {colors.bg, colors.bg}}
+    middle = {{colors.bg_highlight, colors.bg_statusline}},
+    right = {{colors.bg_highlight, colors.bg_statusline}, {colors.bg, colors.bg}}
 }
 
 karma.tabline = {
     left = {{colors.bg, colors.bg_highlight}, {colors.bg, colors.bg}},
-    middle = {{colors.fg_gutter, colors.bg_statusline}},
-    right = {{colors.fg_gutter, colors.bg_statusline}, {colors.bg, colors.bg}},
-    tabsel = {{colors.blue, colors.fg_gutter}, {colors.bg, colors.bg}}
+    middle = {{colors.bg_highlight, colors.bg_statusline}},
+    right = {{colors.bg_highlight, colors.bg_statusline}, {colors.bg, colors.bg}},
+    tabsel = {{colors.blue, colors.bg_highlight}, {colors.bg, colors.bg}}
 }
 
 if vim.o.background == "light" then

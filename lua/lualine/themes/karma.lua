@@ -6,34 +6,34 @@ local karma = {}
 
 karma.normal = {
   a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
+  b = { bg = colors.bg_highlight, fg = colors.fg },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
 karma.insert = {
   a = { bg = colors.green, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.green },
+  b = { bg = colors.bg, fg = colors.green },
 }
 
 karma.command = {
   a = { bg = colors.yellow, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.yellow },
+  b = { bg = colors.bg_highlight, fg = colors.yellow },
 }
 
 karma.visual = {
-  a = { bg = colors.magenta, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.magenta },
+  a = { bg = colors.bg_highlight, fg = colors.fg },
+  b = { bg = colors.bg_highlight, fg = colors.fg },
 }
 
 karma.replace = {
   a = { bg = colors.red, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.red },
+  b = { bg = colors.bg_highlight, fg = colors.red },
 }
 
 karma.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.blue },
-  b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
-  c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
+  b = { bg = colors.bg_statusline, fg = colors.bg_highlight, gui = "bold" },
+  c = { bg = colors.bg_statusline, fg = colors.bg_highlight },
 }
 
 if vim.o.background == "light" then
