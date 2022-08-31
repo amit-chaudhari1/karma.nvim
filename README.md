@@ -170,7 +170,7 @@ Much of the Lua util and color assigning is inspired by [NightFox.nvim](https://
 
 
 ## 🎨 Palette
-![Karma colorPalette](screenshots/palette.png)
+![Karma's color palette](screenshots/Palette.png)
 
 ## 🔥 Contributing
 
