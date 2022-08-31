@@ -1,6 +1,6 @@
 # 🏙 Karma
 
-![Screenshot of Karma, split between the light and dark mode](screenshots/ScreenshotSplit.jpg)
+![Screenshot of Karma, split between the light and dark mode](screenshots/ScreenshotSplit.png)
 
 ## ⚡️ Requirements
 
