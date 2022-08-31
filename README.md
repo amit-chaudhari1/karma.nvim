@@ -1,48 +1,6 @@
 # 🏙 Karma
 
-A dark and light Neovim theme written in Lua ported from the Visual Studio Code [Karma](https://github.com/sreetamdas/karma) theme.
-
-Much of Lua util and color assigning is inspired from [NightFox.nvim](https://github.com/EdenEast/nightfox.nvim) and [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-
-this theme is not as polished as the OG karma in vscode, there's a lot of stuff that will probably change over time. I'd appreciate any help I can get.
-
-## Dark Karma
-![DarkKarma_Screenshot](screenshots/sc1.jpg)
-![DarkKarma_Screenshot](screenshots/sc2.jpg)
-
-
-## Light Karma
-![LightKarma_Screenshot](screenshots/Lsc1.png)
-![LightKarma_Screenshot](screenshots/Lsc2.png)
-
-## ✨ Features
-
-- supports the latest Neovim 5.0 features like TreeSitter and LSP
-- minimal inactive statusline
-- vim terminal colors
-- darker background for sidebar-like windows
-- **lualine** theme
-
-### Plugin Support
-
-- [x] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [x] [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-- [x] [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
-- [x] [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
-- [x] [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-- [x] [Git Gutter](https://github.com/airblade/vim-gitgutter)
-- [x] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [ ] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- [ ] [WhichKey](https://github.com/liuchengxu/vim-which-key)
-- [ ] [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [ ] [Dashboard](https://github.com/glepnir/dashboard-nvim)
-- [ ] [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-- [x] [Lualine](https://github.com/hoob3rt/lualine.nvim)
-- [x] [Lightline](https://github.com/itchyny/lightline.vim)
-- [ ] [Neogit](https://github.com/TimUntersberger/neogit)
-- [ ] [vim-sneak](https://github.com/justinmk/vim-sneak)
-- [ ] [Fern](https://github.com/lambdalisue/fern.vim)
-- [ ] [Barbar](https://github.com/romgrk/barbar.nvim)
+![Screenshot of Karma, split between the light and dark mode](screenshots/ScreenshotSplit.png)
 
 ## ⚡️ Requirements
 
@@ -52,13 +10,13 @@ this theme is not as polished as the OG karma in vscode, there's a lot of stuff 
 
 Install the theme with your preferred package manager:
 
-[vim-plug](https://github.com/junegunn/vim-plug)
+With [`vim-plug`](https://github.com/junegunn/vim-plug):
 
 ```vim
 Plug 'amitchaudhari9121/karma.nvim', { 'branch': 'main' }
 ```
 
-[packer](https://github.com/wbthomason/packer.nvim)
+With [`packer`](https://github.com/wbthomason/packer.nvim):
 
 ```lua
 use 'amitchaudhari9121/karma.nvim'
@@ -106,16 +64,13 @@ set-option -ga terminal-overrides ',XXX:Tc'  # older versions of tmux
 
 ```  
 
-## 🎨 Palette
-![Karma colorPalette](screenshots/palette.png)
-
 ## ⚙️ Configurationn
 
-> ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme karma`
+> ❗️ You must set the configuration **BEFORE** loading the color scheme with `colorscheme karma`
 
-The theme comes in two styles, a darker variant `night` and `day`.
+The themes come with a darker `night` variant, and a lighter `day` theme. 
 
-The **day** style will be used if:
+For instance, you could set the theme to `day` by:
 
 - `vim.g.karma_style == "day"`
 -  `vim.o.background == "light"`
@@ -167,9 +122,9 @@ let g:karma_colors = {
 colorscheme karma
 ```
 
-### Making `undercurls` work properly in **Tmux**
+### Making `undercurls` work in tmux
 
-To have undercurls show up and in color, add the following to your **Tmux** config file:
+To have undercurls show up and in color, add the following to your **tmux** config file:
 
 ```sh
 # Undercurl
@@ -178,10 +133,47 @@ set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
 
+## Info
+
+This theme is a port of [karma](https://github.com/sreetamdas/karma).
+
+Much of the Lua util and color assigning is inspired by [NightFox.nvim](https://github.com/EdenEast/nightfox.nvim) and [tokyonight.nvim](https://github.com/folke/tokyonight.nvim).
+
+## ✨ Features
+
+- Supports the latest Neovim 5.0 features like TreeSitter and LSP
+- Minimal inactive statusline
+- Vim terminal colors
+- Darker background for sidebar-like windows
+- **Lualine** theme
+
+### Plugin Support
+
+- [x] [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [x] [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
+- [x] [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
+- [x] [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
+- [x] [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
+- [x] [Git Gutter](https://github.com/airblade/vim-gitgutter)
+- [x] [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [ ] [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
+- [ ] [WhichKey](https://github.com/liuchengxu/vim-which-key)
+- [ ] [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [ ] [Dashboard](https://github.com/glepnir/dashboard-nvim)
+- [ ] [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
+- [x] [Lualine](https://github.com/hoob3rt/lualine.nvim)
+- [x] [Lightline](https://github.com/itchyny/lightline.vim)
+- [ ] [Neogit](https://github.com/TimUntersberger/neogit)
+- [ ] [vim-sneak](https://github.com/justinmk/vim-sneak)
+- [ ] [Fern](https://github.com/lambdalisue/fern.vim)
+- [ ] [Barbar](https://github.com/romgrk/barbar.nvim)
+
+
+## 🎨 Palette
+![Karma's color palette](screenshots/Palette.png)
 
 ## 🔥 Contributing
 
 Pull requests are welcome. 
 
-I know this theme is not as polished right now as it can be, 
-I can't test the theme on every terminal I know of, so you are encouraged to create and file an issue about any problem you've faced
+I know this theme is not as polished right now as it can be, nor can I test the theme on every terminal I know of. Users are encouraged to create and file an issue about any problems they've faced.
